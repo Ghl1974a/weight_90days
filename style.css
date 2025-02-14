@@ -1,45 +1,85 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
 }
 
+/* Container */
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     max-width: 400px;
     margin: auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
 }
 
+/* Title */
 h1 {
+    font-size: 22px;
     color: #2c3e50;
 }
 
+/* Input Section */
 .input-section {
     margin: 15px 0;
 }
 
 input {
     width: 80px;
-    padding: 5px;
-    margin: 5px;
+    padding: 8px;
+    margin: 10px;
     text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
-    background-color: #27ae60;
+    background: #27ae60;
     color: white;
     padding: 8px 12px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
+button:hover {
+    background: #219150;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #27ae60;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Stats */
 .stats {
     margin-top: 10px;
+    font-size: 14px;
 }
 
 canvas {
