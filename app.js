@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadWeightData);
 
 let weightData = JSON.parse(localStorage.getItem("weightData")) || [];
+const goalWeight = 95;
 
 function saveWeight() {
     let weightInput = document.getElementById("weight").value;
@@ -30,7 +31,14 @@ function loadWeightData() {
     document.getElementById("current-weight").textContent = currentWeight;
     document.getElementById("total-lost").textContent = totalLost;
 
+    updateProgressBar(startWeight, currentWeight);
     drawCharts();
+}
+
+function updateProgressBar(startWeight, currentWeight) {
+    let progressPercent = ((startWeight - currentWeight) / (startWeight - goalWeight)) * 100;
+    progressPercent = Math.min(100, Math.max(0, progressPercent)); 
+    document.getElementById("progress-fill").style.width = progressPercent + "%";
 }
 
 function drawCharts() {
