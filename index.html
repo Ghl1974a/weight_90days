@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>90-Day Weight Tracker</h1>
+        
+        <div class="input-section">
+            <label for="weight">Enter Your Weight (kg):</label>
+            <input type="number" id="weight" step="0.1">
+            <button onclick="saveWeight()">Save</button>
+        </div>
+
+        <div class="stats">
+            <p><strong>Starting Weight:</strong> <span id="start-weight">--</span> kg</p>
+            <p><strong>Current Weight:</strong> <span id="current-weight">--</span> kg</p>
+            <p><strong>Total Lost:</strong> <span id="total-lost">--</span> kg</p>
+        </div>
+
+        <canvas id="weightChart"></canvas>
+        <canvas id="bmiChart"></canvas>
+    </div>
+</body>
+</html>
